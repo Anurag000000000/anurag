@@ -7,8 +7,8 @@
     <style>
         body {
             margin: 0;
-            font-family: 'Arial Black', Gadget, sans-serif;
-            /* Yahan background image hai */
+            padding: 0;
+            font-family: Arial, sans-serif;
             background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=1200');
             background-size: cover;
             background-position: center;
@@ -19,106 +19,83 @@
             flex-direction: column;
             justify-content: center;
             min-height: 100vh;
-            padding: 20px;
         }
 
-        h1 { font-size: 3rem; margin: 0; letter-spacing: 2px; text-transform: uppercase; }
-        h2 { font-size: 2rem; margin: 10px 0 30px 0; font-weight: normal; }
-
-        .features {
-            text-align: left;
-            display: inline-block;
-            margin-bottom: 30px;
-            font-family: Arial, sans-serif;
-            font-size: 1.1rem;
+        /* Isse naam ek line mein aayega */
+        .header-container {
+            width: 100%;
+            margin-bottom: 10px;
         }
 
-        .features div { margin: 15px 0; display: flex; align-items: center; }
-        
-        /* Green Tick Style */
-        .tick { 
-            color: #00ff00; 
-            border: 2px solid #00ff00; 
-            border-radius: 50%; 
-            width: 20px; 
-            height: 20px; 
-            display: inline-flex; 
-            align-items: center; 
-            justify-content: center; 
-            margin-right: 15px; 
-            font-size: 0.8rem;
+        h1 {
+            font-size: 2.2rem; /* Mobile ke liye sahi size */
             font-weight: bold;
+            text-transform: uppercase;
+            margin: 0;
+            display: inline-block; /* Bagal mein rakhne ke liye */
+            white-space: nowrap; /* Line change na ho isliye */
         }
 
-        /* Pulsing Join Button */
+        h2 { font-size: 1.5rem; color: #ccc; margin-top: 10px; }
+
+        .features { text-align: left; display: inline-block; margin: 30px 0; }
+        .features div { margin: 10px 0; font-size: 1.1rem; display: flex; align-items: center; }
+        .tick { color: #2ecc71; border: 2px solid #2ecc71; border-radius: 50%; width: 20px; height: 20px; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem; }
+
         .btn {
-            background-color: #00e676;
+            background: #2ecc71;
             color: white;
-            padding: 20px 50px;
-            font-size: 1.6rem;
+            padding: 15px 30px;
+            font-size: 1.3rem;
             font-weight: bold;
             text-decoration: none;
-            border-radius: 10px;
+            border-radius: 8px;
             display: inline-block;
-            box-shadow: 0 0 20px rgba(0, 230, 118, 0.5);
-            text-transform: uppercase;
             animation: pulse 1.5s infinite;
         }
 
         @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.7); }
-            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(0, 230, 118, 0); }
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
 
-        .timer { margin-top: 25px; font-size: 1.4rem; font-weight: normal; }
-        .countdown { color: #00ff00; font-weight: bold; }
-
-        .disclaimer {
-            font-size: 0.7rem;
-            max-width: 600px;
-            margin: 40px auto 0;
-            opacity: 0.5;
-            font-family: Arial, sans-serif;
-            line-height: 1.4;
-        }
+        .timer-box { margin-top: 20px; font-size: 1.2rem; }
+        .countdown { color: #2ecc71; font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <h1 class="name-header">ANURAG ANALYST</h1>
+    <div class="header-container">
+        <h1>ANURAG ANALYST</h1>
+    </div>
     <h2>Latest updates</h2>
 
     <div class="features">
-        <div><span class="tick">✔</span> Research-led insights with transparent records</div>
+        <div><span class="tick">✔</span> Research-led insights</div>
         <div><span class="tick">✔</span> Recent matches and learnings</div>
         <div><span class="tick">✔</span> BBL news, stats, and highlights</div>
     </div>
 
     <br>
-    <a href="https://t.me/+FISIJYSOxo85YmRl" class="btn">JOIN NOW FOR FREE 🚀</a>
+    <a href="https://t.me/+FISIJYSOxo85YmR1" class="btn">JOIN NOW FOR FREE 🚀</a>
 
-    <div class="timer">
-        FREE JOINING ENDS IN... <span class="countdown" id="timer">15</span>
+    <div class="timer-box">
+        FREE JOINING ENDS IN... <span class="countdown" id="timer">15</span> seconds
     </div>
 
-    <p class="disclaimer">
-        Disclaimer: This channel shares cricket updates and analysis. It does not provide or promote betting or gambling. Joining or acting on information is at your own discretion.
-    </p>
-<script>
-    // Sirf 15 seconds ka countdown
-    let time = 15; 
-    const timerElement = document.getElementById('timer');
-
-    setInterval(() => {
-        if (time > 0) {
-            time--;
-            timerElement.innerText = time;
-        } else {
-            timerElement.innerText = "0";
-        }
-    }, 1000);
-</script>
+    <script>
+        let time = 15;
+        const timerElement = document.getElementById('timer');
+        setInterval(() => {
+            if (time > 0) {
+                time--;
+                timerElement.innerText = time;
+            } else {
+                timerElement.innerText = "0";
+            }
+        }, 1000);
+    </script>
 
 </body>
 </html>
