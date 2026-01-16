@@ -87,7 +87,6 @@
 <body>
 
     <h1>ANURAG ANALYST</h1>
-    
     <h2>Latest updates</h2>
 
     <div class="features">
@@ -108,18 +107,25 @@
     </p>
 
     <script>
-        // Real Countdown Timer (15 Seconds)
-        let time = 900; 
-        const timerElement = document.getElementById('timer');
-        
-        setInterval(() => {
-            let minutes = Math.floor(time / 60);
-            let seconds = time % 60;
-            seconds = seconds < 10 ? '0' + seconds : seconds;
-            timerElement.innerText = ${minutes}:${seconds} seconds;
-            if (time > 0) time--;
-        }, 1000);
-    </script>
+    // 15 Minutes Countdown Timer
+    let time = 900; 
+    const timerElement = document.getElementById('timer');
+
+    setInterval(() => {
+        let minutes = Math.floor(time / 60);
+        let currentSeconds = time % 60;
+
+        // Seconds ko 00 format mein dikhane ke liye
+        currentSeconds = currentSeconds < 10 ? '0' + currentSeconds : currentSeconds;
+
+        // Timer ko "15:00" format mein dikhane ke liye
+        timerElement.innerText = minutes + ":" + currentSeconds;
+
+        if (time > 0) {
+            time--;
+        }
+    }, 1000);
+</script>
 
 </body>
 </html>
