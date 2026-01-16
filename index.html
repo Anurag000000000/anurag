@@ -3,67 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cricket Analyst Landing Page</title>
+    <title>ANURAG ANALYST</title>
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            font-family: 'Arial Black', Gadget, sans-serif;
+            /* Yahan background image hai */
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=1200');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             color: white;
             text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
             min-height: 100vh;
+            padding: 20px;
         }
 
-        h1 { font-size: 2.5rem; text-transform: uppercase; margin-bottom: 10px; }
-        h2 { font-size: 1.5rem; margin-bottom: 20px; color: #f1f1f1; }
+        h1 { font-size: 3rem; margin: 0; letter-spacing: 2px; text-transform: uppercase; }
+        h2 { font-size: 2rem; margin: 10px 0 30px 0; font-weight: normal; }
 
         .features {
             text-align: left;
             display: inline-block;
             margin-bottom: 30px;
+            font-family: Arial, sans-serif;
+            font-size: 1.1rem;
         }
 
-        .features div { margin: 10px 0; font-size: 1.1rem; }
-        .tick { color: #2ecc71; margin-right: 10px; }
+        .features div { margin: 15px 0; display: flex; align-items: center; }
+        
+        /* Green Tick Style */
+        .tick { 
+            color: #00ff00; 
+            border: 2px solid #00ff00; 
+            border-radius: 50%; 
+            width: 20px; 
+            height: 20px; 
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin-right: 15px; 
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
 
+        /* Pulsing Join Button */
         .btn {
-            background-color: #2ecc71;
+            background-color: #00e676;
             color: white;
-            padding: 20px 40px;
-            font-size: 1.5rem;
+            padding: 20px 50px;
+            font-size: 1.6rem;
             font-weight: bold;
             text-decoration: none;
             border-radius: 10px;
             display: inline-block;
-            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4);
-            transition: 0.3s;
+            box-shadow: 0 0 20px rgba(0, 230, 118, 0.5);
+            text-transform: uppercase;
+            animation: pulse 1.5s infinite;
         }
 
-        .timer {
-            margin-top: 20px;
-            font-size: 1.2rem;
-            color: #fff;
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(0, 230, 118, 0); }
+            100% { transform: scale(1); }
         }
 
-        .countdown { color: #2ecc71; font-weight: bold; }
+        .timer { margin-top: 25px; font-size: 1.4rem; font-weight: normal; }
+        .countdown { color: #00ff00; font-weight: bold; }
 
         .disclaimer {
             font-size: 0.7rem;
             max-width: 600px;
             margin: 40px auto 0;
-            opacity: 0.6;
-            padding: 0 20px;
+            opacity: 0.5;
+            font-family: Arial, sans-serif;
+            line-height: 1.4;
         }
     </style>
 </head>
 <body>
 
-    <h1>ANURAG ANALYST</h1>
+    <h1>ANURAG | CRICKET</h1>
+    <h1>ANALYST</h1>
+
     <h2>Latest updates</h2>
 
     <div class="features">
@@ -73,27 +98,27 @@
     </div>
 
     <br>
-    <a href=" https://t.me/+FISIJYSOxo85YmRl " class="btn">JOIN NOW FOR FREE 🚀</a>
+    <a href="https://t.me/+FISIJYSOxo85YmR1" class="btn">JOIN NOW FOR FREE 🚀</a>
 
     <div class="timer">
-        FREE JOINING ENDS IN... <span class="countdown" id="timer">15 seconds</span>
+        FREE JOINING ENDS IN... <span class="countdown" id="timer">15:00</span>
     </div>
 
     <p class="disclaimer">
-        Disclaimer: This channel shares cricket updates and analysis. It does not provide or promote betting or gambling. 
-        Joining or acting on information is at your own discretion.
+        Disclaimer: This channel shares cricket updates and analysis. It does not provide or promote betting or gambling. Joining or acting on information is at your own discretion.
     </p>
 
     <script>
-        // Simple Countdown Timer
-        let seconds = 15;
+        // Real Countdown Timer (15 Minutes)
+        let time = 900; 
         const timerElement = document.getElementById('timer');
         
         setInterval(() => {
-            if (seconds > 0) {
-                seconds--;
-                timerElement.innerText = seconds + " seconds";
-            }
+            let minutes = Math.floor(time / 60);
+            let seconds = time % 60;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            timerElement.innerText = ${minutes}:${seconds} seconds;
+            if (time > 0) time--;
         }, 1000);
     </script>
 
