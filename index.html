@@ -5,51 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ANURAG ANALYST</title>
     <style>
-        /* Isse naam ek line mein aayega */
-        .header-container {
-            width: 100%;
-            margin-bottom: 10px;
-        }
-
-        h1 {
-            font-size: 2.2rem; /* Mobile ke liye sahi size */
-            font-weight: bold;
-            text-transform: uppercase;
-            margin:body {
-    margin: 0;
-    padding: 0;
-    padding-top: 40px; /* Isse naam upar chala jayega */
-    font-family: Arial, sans-serif;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=1200');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* 'center' ki jagah 'flex-start' karein */
-    min-height: 100vh;
-} 0;
-            display: inline-block; /* Bagal mein rakhne ke liye */
-            white-space: nowrap; /* Line change na ho isliye */
-        }
-
-        h2 { font-size: 1.5rem; color: #ccc; margin-top: 10px; }
-
-        .features { text-align: left; display: inline-block; margin: 30px 0; }
-        .features div { margin: 10px 0; font-size: 1.1rem; display: flex; align-items: center; }
-        .tick { color: #2ecc71; border: 2px solid #2ecc71; border-radius: 50%; width: 20px; height: 20px; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem; }
-
-        .btn {
-            background: #2ecc71;
+        body {
+            margin: 0;
+            padding: 0;
+            /* Content ko upar le jaane ke liye padding aur flex-start */
+            padding-top: 60px; 
+            font-family: 'Arial Black', sans-serif;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=1200');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             color: white;
-            padding: 15px 30px;
-            font-size: 1.3rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; 
+            min-height: 100vh;
+        }
+
+        /* Name ko ek line mein aur stylish dikhane ke liye */
+        h1 {
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            margin: 0;
+            letter-spacing: 1px;
+            display: block;
+        }
+
+        h2 { 
+            font-size: 1.6rem; 
+            color: #ffffff; 
+            margin-top: 15px; 
+            font-weight: normal;
+        }
+
+        .features {
+            text-align: left;
+            display: inline-block;
+            margin: 40px auto;
+            max-width: 90%;
+        }
+
+        .features div {
+            margin: 18px 0;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Vicky Style Green Ticks */
+        .tick {
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* Pulsing Join Button */
+        .btn {
+            background-color: #2ecc71;
+            color: white;
+            padding: 20px 40px;
+            font-size: 1.4rem;
             font-weight: bold;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 12px;
             display: inline-block;
+            text-transform: uppercase;
+            box-shadow: 0 0 20px rgba(46, 204, 113, 0.4);
             animation: pulse 1.5s infinite;
         }
 
@@ -59,39 +90,63 @@
             100% { transform: scale(1); }
         }
 
-        .timer-box { margin-top: 20px; font-size: 1.2rem; }
-        .countdown { color: #2ecc71; font-weight: bold; }
+        .timer-container {
+            margin-top: 30px;
+            font-size: 1.3rem;
+            font-family: Arial, sans-serif;
+        }
+
+        .countdown {
+            color: #00ff00;
+            font-weight: bold;
+        }
+
+        .disclaimer {
+            font-size: 0.75rem;
+            max-width: 550px;
+            margin: 50px auto 20px;
+            opacity: 0.5;
+            line-height: 1.4;
+            padding: 0 20px;
+            font-family: Arial, sans-serif;
+        }
     </style>
 </head>
 <body>
 
-    <div class="header-container">
-        <h1>ANURAG ANALYST</h1>
-    </div>
+    <h1>ANURAG ANALYST</h1>
     <h2>Latest updates</h2>
 
     <div class="features">
-        <div><span class="tick">✔</span> Research-led insights</div>
+        <div><span class="tick">✔</span> Research-led insights with transparent records</div>
         <div><span class="tick">✔</span> Recent matches and learnings</div>
         <div><span class="tick">✔</span> BBL news, stats, and highlights</div>
     </div>
 
-    <br>
-    <a href="https://t.me/+FISIJYSOxo85YmR1" class="btn">JOIN NOW FOR FREE 🚀</a>
+    <div>
+        <a href="https://t.me/+FISIJYSOxo85YmR1" class="btn">JOIN NOW FOR FREE 🚀</a>
+    </div>
 
-    <div class="timer-box">
+    <div class="timer-container">
         FREE JOINING ENDS IN... <span class="countdown" id="timer">15</span> seconds
     </div>
 
+    <p class="disclaimer">
+        Disclaimer: This channel shares cricket updates and analysis. It does not provide or promote betting or gambling. Joining or acting on information is at your own discretion.
+    </p>
+
     <script>
+        // 15 Seconds Countdown Logic
         let time = 15;
         const timerElement = document.getElementById('timer');
-        setInterval(() => {
+
+        const countdownInterval = setInterval(() => {
             if (time > 0) {
                 time--;
                 timerElement.innerText = time;
             } else {
                 timerElement.innerText = "0";
+                clearInterval(countdownInterval);
             }
         }, 1000);
     </script>
