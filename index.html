@@ -105,24 +105,17 @@
     <p class="disclaimer">
         Disclaimer: This channel shares cricket updates and analysis. It does not provide or promote betting or gambling. Joining or acting on information is at your own discretion.
     </p>
-
-    <script>
-    // 15 Minutes Countdown Timer
-    let time = 900; 
+<script>
+    // Sirf 15 seconds ka countdown
+    let time = 15; 
     const timerElement = document.getElementById('timer');
 
     setInterval(() => {
-        let minutes = Math.floor(time / 60);
-        let currentSeconds = time % 60;
-
-        // Seconds ko 00 format mein dikhane ke liye
-        currentSeconds = currentSeconds < 10 ? '0' + currentSeconds : currentSeconds;
-
-        // Timer ko "15:00" format mein dikhane ke liye
-        timerElement.innerText = minutes + ":" + currentSeconds;
-
         if (time > 0) {
             time--;
+            timerElement.innerText = time;
+        } else {
+            timerElement.innerText = "0";
         }
     }, 1000);
 </script>
