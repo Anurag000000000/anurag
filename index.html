@@ -12,47 +12,24 @@
             background-color: #000;
             color: white;
             text-align: center;
-            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=1000');
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=1000');
             background-size: cover;
             background-position: center;
             min-height: 100vh;
         }
-
         .container { padding: 25px; }
-
-        .brand-name {
-            font-size: 28px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
+        .brand-name { font-size: 28px; font-weight: bold; margin-bottom: 20px; text-transform: uppercase; }
         .profile-pic {
-            width: 130px;
-            height: 130px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             border: 3px solid white;
             margin-bottom: 10px;
+            object-fit: cover;
             background-color: #222;
         }
-
-        /* Number Animation */
-        .big-number {
-            font-size: 80px;
-            color: #32ff00;
-            font-weight: bold;
-            margin: 10px 0;
-            animation: pulse 1s infinite alternate;
-        }
-
-        @keyframes pulse {
-            from { transform: scale(1); opacity: 1; }
-            to { transform: scale(1.1); opacity: 0.8; }
-        }
-
-        .stats-box { font-size: 18px; line-height: 1.8; margin: 20px 0; font-weight: bold;}
-
+        .big-number { font-size: 85px; color: #32ff00; font-weight: bold; margin: 10px 0; }
+        .stats-box { font-size: 18px; line-height: 1.8; margin: 20px 0; font-weight: bold; }
         .join-btn {
             background-color: #32ff00;
             color: black;
@@ -60,16 +37,14 @@
             display: block;
             padding: 18px;
             border-radius: 12px;
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 900;
-            margin: 20px auto;
+            margin: 25px auto;
             max-width: 90%;
             text-transform: uppercase;
             box-shadow: 0 0 20px rgba(50, 255, 0, 0.5);
         }
-
         .footer-text { font-size: 14px; color: #ccc; margin-top: 10px; }
-        .green-text { color: #32ff00; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -77,7 +52,7 @@
 <div class="container">
     <div class="brand-name">HYPER THE BRAND</div>
 
-    <img src="your-photo.jpg" alt="Profile" class="profile-pic">
+    <img src="logo.jpg" alt="Hyper Logo" class="profile-pic">
 
     <div class="big-number" id="countdown">15</div>
 
@@ -89,30 +64,25 @@
         <div>UPCOMING LEAGUE ANALYSIS 🏆</div>
     </div>
 
-    <a href="https://t.me/your_link" class="join-btn">
+    <a href="https://t.me/your_telegram_link" class="join-btn">
         JOIN HYPER THE BRAND <br> CHANNEL 🚀
     </a>
 
     <div class="footer-text">
-        FREE JOINING ENDS IN... <span class="green-text" id="footer-count">15</span>
+        FREE JOINING ENDS IN... <span style="color: #32ff00;" id="footer-count">15</span>
     </div>
 </div>
 
 <script>
-    // Ye script number ko chalta hua dikhayegi (Timer)
     let count = 15;
     const countElement = document.getElementById('countdown');
     const footerCount = document.getElementById('footer-count');
-
     setInterval(() => {
-        if(count > 1) {
-            count--;
-        } else {
-            count = 15; // Reset timer to 15 for infinite loop
-        }
+        if(count > 1) count--;
+        else count = 15;
         countElement.innerText = count;
         footerCount.innerText = count;
-    }, 1000); // Har 1 second mein badlega
+    }, 1000);
 </script>
 
 </body>
