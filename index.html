@@ -3,114 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cricket Expert Landing Page</title>
+    <title>Hyper The Brand - Cricket Expert</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #000;
             color: white;
             text-align: center;
-            background-image: url('https://images.unsplash.com/photo-1512719994953-eabf50895df7?q=80&w=1000&auto=format&fit=crop'); /* Yahan apni background image lagayein */
+            /* Background Image link niche badal sakte hain */
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=1000'); 
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
 
-        .overlay {
-            background: rgba(0, 0, 0, 0.7); /* Background ko dark karne ke liye */
+        .container {
+            padding: 30px 15px;
             min-height: 100vh;
-            padding: 20px;
         }
 
-        .header-title {
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
+        .brand-name {
+            font-size: 26px;
+            font-weight: 900;
+            letter-spacing: 3px;
             text-transform: uppercase;
+            margin-bottom: 25px;
+            color: #ffffff;
+        }
+
+        .profile-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
         }
 
         .profile-pic {
-            width: 120px;
-            height: 120px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
-            border: 3px solid white;
-            margin-bottom: 10px;
+            border: 4px solid #fff;
             object-fit: cover;
+            background-color: #333;
         }
 
         .big-number {
-            font-size: 70px;
+            font-size: 85px;
             color: #32ff00;
-            font-weight: bold;
-            margin: 10px 0;
+            font-weight: 800;
+            margin: 5px 0;
+            line-height: 1;
         }
 
-        .stats {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-
-        .stats p {
-            margin: 10px 0;
+        .stats-box {
+            font-size: 17px;
+            font-weight: 600;
+            margin: 20px 0;
+            line-height: 1.8;
         }
 
         .join-btn {
             background-color: #32ff00;
-            color: black;
+            color: #000;
             text-decoration: none;
             display: block;
-            padding: 15px;
-            border-radius: 10px;
-            font-size: 22px;
-            font-weight: bold;
-            margin: 20px auto;
-            max-width: 90%;
-            box-shadow: 0 5px 15px rgba(50, 255, 0, 0.4);
-        }
-
-        .footer-text {
-            font-size: 14px;
-            color: #ccc;
-            margin-top: 10px;
-        }
-
-        .bottom-title {
-            margin-top: 40px;
+            padding: 18px 10px;
+            border-radius: 12px;
             font-size: 20px;
+            font-weight: 800;
+            margin: 25px auto;
+            max-width: 320px;
             text-transform: uppercase;
+            box-shadow: 0 10px 20px rgba(50, 255, 0, 0.3);
+            transition: transform 0.2s;
         }
+
+        .join-btn:active {
+            transform: scale(0.95);
+        }
+
+        .offer-text {
+            font-size: 13px;
+            color: #bbb;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+        }
+
+        .footer-heading {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.4;
+            padding-bottom: 40px;
+        }
+
+        .green-text { color: #32ff00; }
     </style>
 </head>
 <body>
 
-<div class="overlay">
-    <div class="header-title">CRICKET EXPERT</div>
+<div class="container">
+    <div class="brand-name">HYPER THE BRAND</div>
 
-    <img src="https://via.placeholder.com/150" alt="Profile" class="profile-pic">
+    <div class="profile-container">
+        <img src="my-pic.jpg" alt="Profile" class="profile-pic">
+    </div>
 
     <div class="big-number">54</div>
 
-    <div class="stats">
-        <p>✅ 90/88 MATCH PASSED RECORD 🏆</p>
-        <p>TODAY'S SCORE</p>
-        <p>✅ TRUSTED CRICKET ADVISOR 🏆</p>
-        <p>✅ 5/5 EXPERT CRICKET TIPS TODAY</p>
-        <p>UPCOMING LEAGUE ANALYSIS 🏆</p>
+    <div class="stats-box">
+        <div>✅ 90/88 MATCH PASSED RECORD 🏆</div>
+        <div style="margin: 10px 0; font-size: 14px; opacity: 0.8;">TODAY'S SCORE</div>
+        <div>✅ TRUSTED CRICKET ADVISOR 🏆</div>
+        <div>✅ 5/5 EXPERT CRICKET TIPS TODAY</div>
+        <div>UPCOMING LEAGUE ANALYSIS 🏆</div>
     </div>
 
     <a href="https://t.me/your_link" class="join-btn">
-        JOIN CRICKET EXPERT <br> BHAI CHANNEL 📢
+        JOIN HYPER THE BRAND <br> CHANNEL 🚀
     </a>
 
-    <div class="footer-text">
-        LIMITED TIME OFFER! EN... <span style="color: #32ff00;">54</span>
+    <div class="offer-text">
+        LIMITED TIME OFFER! EN... <span class="green-text">54</span>
     </div>
 
-    <div class="bottom-title">
+    <div class="footer-heading">
         EXPERT PREDICTIONS & BEST <br> BEST RESULTS
     </div>
 </div>
