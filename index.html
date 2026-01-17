@@ -3,153 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANURAG ANALYST</title>
+    <title>Cricket Expert Landing Page</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            /* Content ko upar le jaane ke liye padding aur flex-start */
-            padding-top: 60px; 
-            font-family: 'Arial Black', sans-serif;
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=1200');
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: white;
+            text-align: center;
+            background-image: url('https://images.unsplash.com/photo-1512719994953-eabf50895df7?q=80&w=1000&auto=format&fit=crop'); /* Yahan apni background image lagayein */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            color: white;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start; 
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.7); /* Background ko dark karne ke liye */
             min-height: 100vh;
+            padding: 20px;
         }
 
-        /* Name ko ek line mein aur stylish dikhane ke liye */
-        h1 {
-            font-size: 2.2rem;
+        .header-title {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
             text-transform: uppercase;
-            margin: 0;
-            letter-spacing: 1px;
-            display: block;
         }
 
-        h2 { 
-            font-size: 1.6rem; 
-            color: #ffffff; 
-            margin-top: 15px; 
-            font-weight: normal;
-        }
-
-        .features {
-            text-align: left;
-            display: inline-block;
-            margin: 40px auto;
-            max-width: 90%;
-        }
-
-        .features div {
-            margin: 18px 0;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Vicky Style Green Ticks */
-        .tick {
-            color: #00ff00;
-            border: 2px solid #00ff00;
+        .profile-pic {
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
-            width: 22px;
-            height: 22px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            font-size: 0.8rem;
-            font-weight: bold;
+            border: 3px solid white;
+            margin-bottom: 10px;
+            object-fit: cover;
         }
 
-        /* Pulsing Join Button */
-        .btn {
-            background-color: #2ecc71;
-            color: white;
-            padding: 20px 40px;
-            font-size: 1.4rem;
+        .big-number {
+            font-size: 70px;
+            color: #32ff00;
             font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .stats {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .stats p {
+            margin: 10px 0;
+        }
+
+        .join-btn {
+            background-color: #32ff00;
+            color: black;
             text-decoration: none;
-            border-radius: 12px;
-            display: inline-block;
-            text-transform: uppercase;
-            box-shadow: 0 0 20px rgba(46, 204, 113, 0.4);
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        .timer-container {
-            margin-top: 30px;
-            font-size: 1.3rem;
-            font-family: Arial, sans-serif;
-        }
-
-        .countdown {
-            color: #00ff00;
+            display: block;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 22px;
             font-weight: bold;
+            margin: 20px auto;
+            max-width: 90%;
+            box-shadow: 0 5px 15px rgba(50, 255, 0, 0.4);
         }
 
-        .disclaimer {
-            font-size: 0.75rem;
-            max-width: 550px;
-            margin: 50px auto 20px;
-            opacity: 0.5;
-            line-height: 1.4;
-            padding: 0 20px;
-            font-family: Arial, sans-serif;
+        .footer-text {
+            font-size: 14px;
+            color: #ccc;
+            margin-top: 10px;
+        }
+
+        .bottom-title {
+            margin-top: 40px;
+            font-size: 20px;
+            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
 
-    <h1>HYPER THE BRAND</h1>
-    <h2>Latest updates</h2>
+<div class="overlay">
+    <div class="header-title">CRICKET EXPERT</div>
 
-    <div class="features">
-        <div><span class="tick">✔</span> Research-led insights with transparent records</div>
-        <div><span class="tick">✔</span> Recent matches and learnings</div>
-        <div><span class="tick">✔</span> BBL news, stats, and highlights</div>
+    <img src="https://via.placeholder.com/150" alt="Profile" class="profile-pic">
+
+    <div class="big-number">54</div>
+
+    <div class="stats">
+        <p>✅ 90/88 MATCH PASSED RECORD 🏆</p>
+        <p>TODAY'S SCORE</p>
+        <p>✅ TRUSTED CRICKET ADVISOR 🏆</p>
+        <p>✅ 5/5 EXPERT CRICKET TIPS TODAY</p>
+        <p>UPCOMING LEAGUE ANALYSIS 🏆</p>
     </div>
 
-    <div>
-        <a href="https://t.me/Hyper_Brand_OG_Bot" class="btn">JOIN NOW FOR FREE 🚀</a>
+    <a href="https://t.me/your_link" class="join-btn">
+        JOIN CRICKET EXPERT <br> BHAI CHANNEL 📢
+    </a>
+
+    <div class="footer-text">
+        LIMITED TIME OFFER! EN... <span style="color: #32ff00;">54</span>
     </div>
 
-    <div class="timer-container">
-        FREE JOINING ENDS IN... <span class="countdown" id="timer">15</span> seconds
+    <div class="bottom-title">
+        EXPERT PREDICTIONS & BEST <br> BEST RESULTS
     </div>
-
-    <p class="disclaimer">
-        Disclaimer: This channel shares cricket updates and analysis. It does not provide or promote betting or gambling. Joining or acting on information is at your own discretion.
-    </p>
-
-    <script>
-        // 15 Seconds Countdown Logic
-        let time = 15;
-        const timerElement = document.getElementById('timer');
-
-        const countdownInterval = setInterval(() => {
-            if (time > 0) {
-                time--;
-                timerElement.innerText = time;
-            } else {
-                timerElement.innerText = "0";
-                clearInterval(countdownInterval);
-            }
-        }, 1000);
-    </script>
+</div>
 
 </body>
 </html>
